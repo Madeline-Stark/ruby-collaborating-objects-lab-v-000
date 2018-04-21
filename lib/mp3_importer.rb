@@ -22,7 +22,11 @@ class MP3Importer
   end
 
   def normalize(file)
-    #need to normailze file
+    #need to normailze file like this "./spec/fixtures/mp3s/Action Bronson - Larry Csonka - indie.mp3"
+    song = file.split(" - ")
+    song[0] = song[0].split("/")
+
+    song[0] = song[0][4]
   end
 
   def import
