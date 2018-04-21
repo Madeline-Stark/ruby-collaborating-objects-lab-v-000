@@ -13,7 +13,6 @@ class MP3Importer
     directory = Dir.glob("#{path}/*mp3")
     new_dir = []
     directory.each do |file|
-      binding.pry
       song = self.normalize(file)
       #binding.pry
       new_dir << song
@@ -25,8 +24,9 @@ class MP3Importer
     #need to normailze file like this "./spec/fixtures/mp3s/Action Bronson - Larry Csonka - indie.mp3"
     song = file.split(" - ")
     song[0] = song[0].split("/")
-
     song[0] = song[0][4]
+    song
+    binding.pry
   end
 
   def import
