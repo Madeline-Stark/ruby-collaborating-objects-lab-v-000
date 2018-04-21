@@ -26,7 +26,7 @@ class MP3Importer
     song[0] = song[0].split("/")
     song[0] = song[0][4]
     song
-    binding.pry
+    #binding.pry
   end
 
   def import
