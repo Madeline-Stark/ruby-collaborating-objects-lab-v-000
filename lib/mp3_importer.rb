@@ -27,7 +27,7 @@ class MP3Importer
     song[0] = song[0][4]
     song.join("-")
     song
-    #binding.pry
+    binding.pry
   end
 
   def import
