@@ -25,7 +25,7 @@ class MP3Importer
     song = file.split(" - ")
     song[0] = song[0].split("/")
     song[0] = song[0][4]
-    song.join("-")
+    song = song.join("-")
     song
     binding.pry
   end
