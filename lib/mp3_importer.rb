@@ -6,12 +6,16 @@ class MP3Importer
     @path = path
   end
 
+  def normalize(file)
+
+  end
 
   def files
+    #need to normailze filename with own method that you call within this one
     directory = Dir.glob("#{path}/*mp3")
     new_dir = []
     directory.each do |file|
-      song = Song.new_by_filename(file)
+      song = self.normalize(file)
       #binding.pry
       new_dir << song
     end
